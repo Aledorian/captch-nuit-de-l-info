@@ -62,3 +62,24 @@
     height: 20px;
     border: red 1px solid;
 }
+
+#containerOne .pawn{
+    background-color: #fbe2f9
+}
+
+#containerTwo{
+    border-color: #97e1d8;
+}
+
+#containerTwo .pawn{
+    background-color: #97e1d8
+}
+
+
+#containerThree{
+    border-color: #9be09f;
+}
+
+#containerThree .pawn{
+    background-color: #9be09f;
+}
