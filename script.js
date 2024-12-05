@@ -9,3 +9,13 @@ for (let i = 0; i < 3; i++) {
 }
 
 console.log(randomNumbers);
+
+function generatePawn () {
+    const div = document.createElement('div');
+    div.className = "pawn";
+    document.querySelector("body").append(div);
+}
+
+for (let i = 0; i < 30; i++) {
+    generatePawn();
+}
