@@ -7,18 +7,29 @@
     list-style: none;
 }
 
+h1{
+    font-size: 4em;
+}
+
 #captcha{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 80vh;
+    background-color: #bebebe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center
+}
+
+#captcha main{
+    height: 80%;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
-    height: 80vh;
     align-content: center;
-    background-color: #bebebe;
 }
 
 #sectionOne, #sectionThree, #sectionTwo{
@@ -40,9 +51,9 @@
 }
 
 .container{
-    border: 30px solid #aaa;
+    border: 15px solid #aaa;
     height: 100%;
-    width: 300px;
+    width: 200px;
     margin: 0px 20px;
 }
 
@@ -50,13 +61,23 @@
     border-color: #fbe2f9;
 }
 
+#containerOne .pawn{
+    background-color: #fbe2f9
+}
+
 #containerTwo{
     border-color: #97e1d8;
 }
 
+#containerTwo .pawn{
+    background-color: #97e1d8
+}
+
+
 #containerThree{
     border-color: #9be09f;
 }
+
 .pawn{
     width: 20px;
     height: 20px;
