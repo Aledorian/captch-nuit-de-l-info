@@ -1,13 +1,15 @@
 document.querySelector("dialog").showModal()
 
 function getRandomNumber() {
-    return Math.floor(Math.random() * 9) + 1;
+    return Math.floor(Math.random() * 6);
 }
 
 let randomNumbers = [];
 for (let i = 0; i < 3; i++) {
     randomNumbers.push(getRandomNumber());
 }
+
+
 
 document.querySelector("#sectionOne h3").textContent = randomNumbers[0]
 document.querySelector("#sectionTwo h3").textContent = randomNumbers[1]
@@ -33,8 +35,15 @@ dropZones.forEach(dropZone => {
         ev.preventDefault();
         const draggable = document.querySelector(".dragging");
         dropZone.appendChild(draggable);
-        check();
     })
+})
+
+const pawnContainer = document.querySelector("#pawnContainer");
+
+pawnContainer.addEventListener("dragover", (ev)=>{
+    ev.preventDefault();
+    const draggable = document.querySelector(".dragging");
+    pawnContainer.appendChild(draggable)
 })
 
 for (let i = 0; i < 30; i++) {
@@ -49,7 +58,8 @@ function check () {
     console.log();
     if (JSON.stringify(childCount)=== JSON.stringify(randomNumbers)){
         document.querySelector("dialog").close()
+        document.getElementById("messageConfirm").innerText = "Bravo vous n'êtes pas un robot bonne navigation !"
     }
-    
 }
+
 

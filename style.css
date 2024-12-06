@@ -7,8 +7,9 @@
     list-style: none;
 }
 
-h1{
-    font-size: 4em;
+body{
+    min-height: 100vh;
+    align-content: center;
 }
 
 #captcha{
@@ -16,20 +17,17 @@ h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 80vh;
     background-color: #bebebe;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center
+    padding-left: 50px;
+
 }
 
 #captcha main{
-    height: 80%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
-    align-content: center;
+    height: 80vh;
 }
 
 #sectionOne, #sectionThree, #sectionTwo{
@@ -50,38 +48,61 @@ h1{
     color: #9be09f
 }
 
-.container{
-    border: 15px solid #aaa;
-    height: 100%;
-    width: 200px;
-    margin: 0px 20px;
+
+.container {
+    width: 250px;
+    height: 250px;
+    border: 3px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #containerOne{
     border-color: #fbe2f9;
-}
+    flex-wrap: wrap;
 
-#containerOne .pawn{
-    background-color: #fbe2f9
 }
 
 #containerTwo{
     border-color: #97e1d8;
-}
+    flex-wrap: wrap;
 
-#containerTwo .pawn{
-    background-color: #97e1d8
 }
-
 
 #containerThree{
     border-color: #9be09f;
+    flex-wrap: wrap;
 }
 
-.pawn{
-    width: 20px;
-    height: 20px;
-    border: red 1px solid;
+.pawn {
+    display: flex;
+    flex-wrap: wrap; /* Permet de répartir les jetons sur plusieurs lignes */
+    gap: 10px; /* Espace entre les jetons */
+    justify-content: center;
+    max-width: 600px; /* Largeur maximale pour éviter qu'ils s'étendent trop */
+}
+
+.pawn {
+    width: 50px;
+    height: 50px;
+    background-color: #ffcccb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: grab;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.pawn:hover {
+    transform: scale(1.1); /* Zoom au survol */
+    background-color: #f9a8a8; /* Légèrement plus foncé */
 }
 
 #containerOne .pawn{
@@ -103,4 +124,28 @@ h1{
 
 #containerThree .pawn{
     background-color: #9be09f;
+}
+
+#pawnContainer{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    max-height: 100%;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+#validate{
+    position: absolute;
+    top:80%;
+    background-color: rgba(179, 225, 176, 0.5);
+    border-radius: 15px;
+    border: none;
+    height: 75px;
+    width: 150px;
+
+}
+
+h1{
+    font-size: 5em;
+    text-align: center;
 }
